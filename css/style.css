@@ -64,6 +64,7 @@ body {
 .main {
   grid-area: main;
   display: grid;
+  justify-items: center;
   grid-template-areas:
       "tsipik"
       "textik"
