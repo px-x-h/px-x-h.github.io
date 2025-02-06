@@ -82,7 +82,7 @@ body {
   background-position: center;
   background-size: contain;
   height: 60vh;
-  width: auto;
+  width: 100vw;
 }
 
 .textik {
