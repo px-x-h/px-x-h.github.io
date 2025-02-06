@@ -19,15 +19,16 @@ body {
   display: grid;
   grid-template-areas:
     "header"
-    "mainMenu"
-    "flowers";
+    "main";
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto;
   justify-items: center;
 }
 
 .header {
-  background-color: plum;
+  background-image: url("../img/back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-area: header;
   height: 30vh;
   display: flex;
@@ -49,11 +50,25 @@ body {
     inset 1px 0 1.5px 1px rgba(255, 255, 255, 0.3);
 }
 
+.line.hidden {
+  display: none;
+}
+
 .heart14 {
   margin: 5vh 0 0 0;
   height: 22vh;
   position: relative;
   z-index: 1;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+      "mainMenu"
+      "flowers";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
 }
 
 .mainMenu {
@@ -74,4 +89,33 @@ body {
 
 p {
   margin: 10px 0;
+}
+
+.flowers {
+  height: 1000px;
+}
+
+.fixed-header {
+  display: flex;
+  background-color: white;
+  height: 7vh;
+  position: fixed;
+  z-index: 2;
+  top: -1px;
+  width: 100%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fixed-header.fixed {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.heart-small {
+  height: 5vh;
 }
