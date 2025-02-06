@@ -23,3 +23,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sentences.forEach(sentence => observer.observe(sentence));
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const select = document.querySelector(".amount-select");
+  const button = document.querySelector(".show-button");
+  const container = document.querySelector(".flowers");
+
+  for (let i = 3; i <= 201; i+= 2) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.textContent = i;
+    select.appendChild(option);
+  }
+
+  button.addEventListener("click", function () {
+    const count = parseInt(select.value);
+    if (isNaN(count)) return;
+
+    container.innerHTML = "";
+
+    for (let i = 0; i < count; i++) {
+      let flower = document.createElement("img");
+      flower.src = "../img/flowers/pink.svg";
+      flower.classList.add("pink-flower");
+      container.appendChild(flower);
+    }
+  });
+});

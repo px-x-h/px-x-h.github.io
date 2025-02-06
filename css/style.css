@@ -126,7 +126,11 @@ p {
 }
 
 .flowers {
-
+  display: flex;
+  padding: 30px;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .fixed-header {
@@ -151,5 +155,13 @@ p {
 }
 
 .heart-small {
-  height: 5vh;
+  height: 6vh;
+}
+
+.amount-select {
+  font-family: sans-serif;
+}
+
+.pink-flower {
+  height: 4vh;
 }
