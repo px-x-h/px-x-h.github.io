@@ -65,10 +65,43 @@ body {
   grid-area: main;
   display: grid;
   grid-template-areas:
+      "tsipik"
+      "textik"
       "mainMenu"
       "flowers";
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto auto;
+}
+
+.tsipik {
+  margin: 5vh 0 0 0;
+  grid-area: tsipik;
+  background-image: url("../img/tsipik.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 60vh;
+  width: 100%;
+}
+
+.textik {
+  margin: 2vh 0 0 0;
+  padding: 20px;
+  grid-area: textik;
+  text-align: center;
+  font-size: 5vh;
+}
+
+.sentence {
+  margin: 100px 0 100px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.sentence.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .mainMenu {
@@ -92,7 +125,7 @@ p {
 }
 
 .flowers {
-  height: 1000px;
+
 }
 
 .fixed-header {
