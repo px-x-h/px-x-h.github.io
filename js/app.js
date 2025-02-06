@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (let i = 0; i < count; i++) {
       let flower = document.createElement("img");
-      flower.src = "../img/flowers/pink.svg";
+      flower.src = "../img/flowers/Pink.svg";
       flower.classList.add("pink-flower");
       container.appendChild(flower);
     }
