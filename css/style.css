@@ -163,6 +163,7 @@ p {
   padding: 2vh 25vw 0.5vh 25vw;
   border-radius: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: black;
 }
 
 .heart-small {
@@ -177,6 +178,7 @@ p {
   border-radius: 20px;
   padding: 1vh 7vw 1vh 1vw;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  color: black;
 }
 
 .pink-flower {
