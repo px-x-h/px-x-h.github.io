@@ -52,9 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         flower.classList.add("animate");
       }, i * 75)
 
-      setTimeout(() => {
-        container.scrollIntoView({ behavior: "smooth" });
-      }, 500);
+      container.scrollIntoView({behavior: "smooth"});
     }
 
     const footer = document.querySelector('.footer');
@@ -72,4 +70,3 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(footer);
   });
 });
-
