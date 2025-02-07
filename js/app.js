@@ -47,6 +47,29 @@ document.addEventListener('DOMContentLoaded', function () {
       flower.src = "../img/flowers/Pink.svg";
       flower.classList.add("pink-flower");
       container.appendChild(flower);
+
+      setTimeout(() => {
+        flower.classList.add("animate");
+      }, i * 75)
+
+      setTimeout(() => {
+        container.scrollIntoView({ behavior: "smooth" });
+      }, 500);
     }
+
+    const footer = document.querySelector('.footer');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    }, {threshold: 0.5 });
+
+    observer.observe(footer);
   });
 });
+
