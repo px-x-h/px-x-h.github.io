@@ -10,6 +10,8 @@ window.addEventListener('scroll', function(){
 
 document.addEventListener('DOMContentLoaded', () => {
   const sentences = document.querySelectorAll('.sentence');
+  const valentin = document.querySelectorAll('.valentin');
+
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {threshold: 0.5 });
 
   sentences.forEach(sentence => observer.observe(sentence));
+  valentin.forEach(valent => observer.observe(valent));
 });
 
 document.addEventListener('DOMContentLoaded', function () {
